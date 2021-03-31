@@ -1,451 +1,281 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>/* Stylesheet 1: */
-body {
-    font: 100% Lucida Sans, Verdana;
-    margin: 20px;
-    line-height: 26px;
-}
-
-.container {
-    xmin-width: 900px;
-}
-
-.wrapper {
-    position: relative;
-    overflow: auto;
-}
-
-#top, #sidebar, #bottom, .menuitem {
-    border-radius: 4px;
-    margin: 4px;
-}
-
-#top {
-    background-color: #4CAF50;
-    color: #ffffff;
-    padding: 15px;
-}
-
-#menubar {
-    width: 200px;
-    float: left
-}
-
-#main {
-    padding: 10px;
-    margin: 0 210px;
-}
-
-#sidebar {
-    background-color: #32a4e7;
-    color: #ffffff;
-    padding: 10px;
-    width: 180px;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    position: absolute;
-}
-
-#bottom {
-    border: 1px solid #d4d4d4;
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px;
-    font-size: 70%;
-    line-height: 14px;
-}
-
-#top h1, #top p, #menulist {
-    margin: 0;
-    padding: 0;
-}
-
-.menuitem {
-    background-color: #f1f1f1;
-    border: 1px solid #d4d4d4;
-    list-style-type: none;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.menuitem:hover {
-    background-color: #ffffff;
-}
-
-.menuitem:first-child {
-   background-color:#4CAF50;
-   color: white;
-   font-weight:bold;
-}
-
-a {
-    color: #000000;
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-
-@media (max-width: 800px) {
-    #sidebar {
-        width: auto;
-        position: relative;
-    } 
-    #main {
-        margin-right: 0;
-    }    
-       
-}
-
-@media (max-width: 600px) {
-    #menubar {
-        width: auto;
-        float: none;
+<html>  
+<title>Kimhantak</title>
+<meta charset="UTF-8">
+<style>
+    @keyframes fade1 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    #main {
-        margin: 0;
-    }    
-}
-</style>
+    body {
+        animation-name: fade1;
+        animation-duration: .65s;
+        animation-timing-function: ease-in;
+    }   
+    .hoverd {
+        transition: .1s ease-in;
+    }
+    .hoverd:hover {
+        transform: scale(1.05);
+        overflow: auto;
+    }
+    div.w3-display-middle span, div.w3-display-middle b {
+        transition: .45s linear;
+    }
 
-<style>/* Stylesheet 2: */
-body {
-    font-family: Arial;
-    background-color: #d14836;
-    line-height: 20px;
-}
+    .map {
+        min-width: 1117px;
+        min-height: 619px;
+    }
+    .container {
+        width: 100%;
+        overflow: auto;
+    }
 
-.container {
-    xmin-width: 900px;
-}
-
-.wrapper {
-    position: relative;
-    overflow: auto;
-}
-
-#top {
-    color: #ffffff;
-    padding: 15px;
-    font-size: 30px;
-    line-height: 26px;    
-}
-
-#top h1 {
-    margin:0;
-    line-height: 50px;
-}
-
-#menubar {
-    width: 190px;
-    float: right;
-}
-
-#main {
-    padding: 10px;
-    background-color: #ffffff;
-    font: 80% Verdana;
-}
-
-#main h1, #main h2 {
-    color: #d14836;
-}
-
-#sidebar {
-    background-color: #F6DAD7;
-    color: #d14836;
-    padding: 10px;
-}
-
-#bottom {
-    text-align: center;
-    padding: 10px;
-    font-size: 70%;
-    color: #ffffff;
-}
-
-#menulist {
-    padding:0;
-    font: 16px verdana;
-}
-
-.menuitem {
-    width: 155px;
-    background-color: #d14836;
-    border: 1px solid #d14836;
-    border-radius: 40px;
-    color: #ffffff;
-    list-style-type: none;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.menuitem:nth-child(2) {
-   background-color:white;
-   color: #d14836;
-   font-weight:bold;
-}
-
-.menuitem:hover {
-    background-color: #ffffff;
-    color: #d14836;
-}
-
-a {
-    color: #d14836;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-</style>
-
-<style>/* Stylesheet 3: */
-body {
-    font: 100% Verdana;
-    margin: 20px;
-    line-height: 26px;
-}
-
-.container {
-    xmin-width: 900px;
-}
-
-.wrapper {
-    position: relative;
-    overflow: auto;
-}
-
-#sidebar {
-    background-color: #f1f1f1;
-    border: 1px solid #d4d4d4;
-    padding-left: 10px;
-}
-
-#bottom {
-    text-align: center;
-    padding: 10px;
-    font-size: 70%;
-    line-height: 14px;
-}
-
-h1, h2, h3 {
-    color: #4CAF50;
-}
-
-#menulist {
-    padding: 0;
-    position: relative;
-    overflow: auto;
-}
-
-.menuitem {
-    width: 165px;
-    float: left;
-    background-color: #555555;
-    color: #ffffff;
-    list-style-type: none;
-    margin: 4px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.menuitem:nth-child(3) {
-   background-color:#4CAF50;
-}
-
-.menuitem:hover {
-    background-color: #999999;
-}
-
-a {
-    color: #000000;
-}
-
-a:hover {
-    color: #84c754;
-}
-</style>
-<style>/* Stylesheet 4: */
-body {
-    font: 100% Courier New;
-    margin: 20px;
-    line-height: 26px;
-    background-color: #000000;
-}
-
-.container {
-    xmin-width: 900px;
-}
-
-.wrapper {
-    position: relative;
-    overflow: auto;
-}
-
-#top {
-    color: #84c754;
-    padding: 15px;
-}
-
-#main {
-    padding: 10px;
-    color: #84c754;
-}
-
-#sidebar {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    padding: 10px;
-    width: 320px;
-    top: 0;
-    right: 0;
-    position: absolute;
-    font-size: 80%;
-    line-height: 20px;
-}
-
-#bottom {
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    font-size: 70%;
-    line-height: 14px;
-}
-
-#top h1,#top p {
-    margin: 0;
-}
-
-.menuitem {
-    color: #84c754;
-    cursor: pointer;
-}
-
-.menuitem:nth-child(4) {
-    color:white;
-    font-weight:bold;
-}
-
-.menuitem:hover {
-    color: #ffffff;
-}
-
-a {
-    color: #ffffff;
-}
-
-a:hover {
-    color: #84c754;
-}
-@media (max-width: 600px) {
-    #sidebar {
-       width: auto;
-       margin-bottom:10px;        
-       position: relative;
-    }    
-}
+    html {
+        scroll-behavior: smooth;
+    }
 
 </style>
-
-</head>
+<link rel="shortcut icon" href="./images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
-<div class="container wrapper">
-  <div id="top">
-    <h1>Welcome to Kimhantak Homepage</h1>
-    <p>Use the menu to select different Stylesheets</p>
-  </div>
-  <div class="wrapper">
-   <div id="menubar">
-     <ul id="menulist">
-       <li class="menuitem" onclick="reStyle(0)">Stylesheet 1
-       <li class="menuitem" onclick="reStyle(1)">Stylesheet 2
-       <li class="menuitem" onclick="reStyle(2)">Stylesheet 3
-       <li class="menuitem" onclick="reStyle(3)">Stylesheet 4
-       <li class="menuitem" onclick="noStyles()">No Stylesheet
-     </ul>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#" class="w3-bar-item w3-button"><b>KHT</b> Kimhantak</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#hello" class="w3-bar-item w3-button">Hello</a>
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#homework" class="w3-bar-item w3-button">Homework</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="#location" class="w3-bar-item w3-button">Location</a>
     </div>
-    <div id="main">
-      <h1>Same Page Different Stylesheets</h1>
-      <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
-      <a href="#" onclick="reStyle(0);return false">Stylesheet1</a>,
-      <a href="#" onclick="reStyle(1);return false">Stylesheet2</a>,
-      <a href="#" onclick="reStyle(2);return false">Stylesheet3</a>,
-      <a href="#" onclick="reStyle(3);return false">Stylesheet4</a>.
-      </p>
-       <h2>No Styles</h2>
-      <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:<br><a href="#" onclick="noStyles();return false">No Stylesheet</a>.</p>
-       <img src="./image.jpg" alt="no">
-      <ol style="border: 5px dotted green;">
-          <li><a href="./homework1.html">homework1</a></li>
-          <li><a href="./homework2.html">homework2</a></li>
-          <li><a href="./homework3.html">homework3</a></li>
-          <li><a href="./homework4.html">homework4</a></li>
-      </ol>
-   </div>
-    <div id="sidebar">
-      <h3>Side-Bar</h3>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    </div>
-  </div>  
-  
-  
-  <div id="bottom">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
   </div>
 </div>
 
-<script>
-function noStyles() {
-    document.styleSheets[0].disabled = true;
-    document.styleSheets[1].disabled = true;
-    document.styleSheets[2].disabled = true;
-    document.styleSheets[3].disabled = true;
-}
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="">
+    <video class="w3-image" width="1500" height="800" autoplay loop muted>
+        <source src="./images/videos/video.mp4" type="video/mp4">
+        <img class="w3-image" src="./images/main_theme.jpg" alt="Architecture" width="1500" height="800">
+    </video>
+    <div class="w3-display-middle w3-margin-top w3-center">
+        <h1 class="w3-xxlarge w3-text-white">
+            <span class="w3-padding w3-black w3-opacity-min">
+                <b>KHT</b>
+            </span> 
+            <span class="w3-hide-small w3-text-light-grey">
+                <b>Kimhantak</b>
+            </span>
+            <br/>
+            <span class="w3-hide-small w3-text-light-grey"><B>Hello world!</B></span>
+        </h1>
+    </div>
+  </header>
 
-function reStyle(n) {
-    noStyles()
-    document.styleSheets[n].disabled = false;
-}
 
-function closeBlackdiv() {
-    var blackdiv, stylediv;
-    blackdiv = document.getElementById("blackdiv")
-    blackdiv.parentNode.removeChild(blackdiv);
-    stylediv = document.getElementById("stylediv")
-    stylediv.parentNode.removeChild(stylediv);
-}
 
-function showStyle(n) {
-var div, text, blackdiv;
-blackdiv = document.createElement("DIV");
-blackdiv.setAttribute("style","background-color:#000000;position:absolute;width:100%;height:100%;top:0;opacity:0.5;margin-left:-20px;");
-blackdiv.setAttribute("id","blackdiv");
-blackdiv.setAttribute("onclick","closeBlackdiv()");
-document.body.appendChild(blackdiv);
-div = document.createElement("DIV");
-div.setAttribute("id","stylediv");
-div.setAttribute("style","background-color:#ffffff;padding-left:5px;position:absolute;width:auto;height:auto;top:100px;bottom:50px;left:200px;right:200px;overflow:auto;font-family: monospace; white-space: pre;line-height:16px;");
-text = document.createTextNode(document.getElementsByTagName("STYLE")[n].innerHTML);
-div.appendChild(text);
-document.body.appendChild(div);
-//alert(document.getElementsByTagName("STYLE")[n].innerHTML);
-}
-reStyle(0);
-</script>
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <div class="w3-container w3-padding-32" id="hello">
+    <h3 class="w3-border-bottom w3-border-grey w3-padding-16">Hello !</h3>
+  </div>
+
+  <div class="w3-row-padding">
+      <div class="w3-margin-bottom">
+          <p class="w3-serif" style="font-weight: normal; line-height: 33px; letter-spacing: 3px; font-size:1.8rem;">
+              동서대학교를 재학 중인 <b class="w3-light-blue" style="font-size: 2.2rem;">김한탁</b>입니다.<br><br>
+              현재 <b class="w3-light-blue" style="font-size: 2.2rem;">프론트엔드+모바일 앱 개발자</b>가 되기 위해 개발을 공부하고 있습니다.<br><br>
+              또한<b>,</b> 부가적으로 <b class="w3-light-blue" style="font-size: 2.2rem;">UI 디자인</b>을 공부하고 있습니다.
+          </p>
+      </div>
+  </div>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-grey w3-padding-16">Projects</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container hoverd">
+        <div class="w3-display-topleft w3-black w3-padding">Landing Page 1</div>
+        <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">React</div>
+        <a target="_blank" href="https://kht.netlify.app/">
+            <img  src="./images/practice_theme.png" alt="practice1" style="width:100%" height="175.38">
+        </a>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container hoverd">
+        <div class="w3-display-topleft w3-black w3-padding">Landing Page 2</div>
+        <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">React</div>
+        <a target="_blank" href="https://khthome.netlify.app/">
+            <img src="./images/practice_theme1.png" alt="practice2" style="width:100%" height="175.38">
+        </a>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+          <div class="w3-display-topleft w3-black w3-padding">Simple To-Do Application</div>
+          <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">Kotlin</div>
+          <a target="_blank" href="https://github.com/kimhantak/TODO">
+              <img src="./images/practice_theme2.jpg" alt="practice3" style="width:100%" height="175.38">
+          </a>
+        </div>
+      </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+          <div class="w3-display-topleft w3-black w3-padding">Photoshop</div>
+          <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">CS2</div>
+          <a target="_blank" href="./images/practice_theme3.png">
+              <img src="./images/practice_theme3.png" alt="practice4" style="width:100%" height="175.38">
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+          <div class="w3-display-topleft w3-black w3-padding">Photoshop</div>
+          <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">CS2</div>
+          <a target="_blank" href="./images/practice_theme4.jpg">
+              <img src="./images/practice_theme4.jpg" alt="practice5" style="width:100%" height="175.38">
+          </a>
+        </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+            <div class="w3-display-topleft w3-black w3-padding">Natural</div>
+            <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">Pixabay</div>
+            <a target="_blank" href="./images/pixabay1.jpg">
+                <img src="./images/pixabay1.jpg" alt="pixabay" style="width:100%" height="175.38">
+            </a>
+          </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+            <div class="w3-display-topleft w3-black w3-padding">Natural</div>
+            <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">Pixabay</div>
+            <a target="_blank" href="./images/pixabay2.jpg">
+                <img src="./images/pixabay2.jpg" alt="pixabay" style="width:100%" height="175.38">
+            </a>
+          </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container hoverd">
+            <div class="w3-display-topleft w3-black w3-padding">Natural</div>
+            <div class="w3-display-bottomright w3-light-green w3-text-white w3-padding">Pixabay</div>
+            <a target="_blank" href="./images/pixabay3.jpg">
+                <img src="./images/pixabay3.jpg" alt="pixabay" style="width:100%" height="175.38">
+            </a>
+          </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="homework">
+    <h3 class="w3-border-bottom w3-border-grey w3-padding-16">Homework</h3>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="./images/home1.jpg" alt="no" style="width:100%" height="175.38" class="hoverd">
+      <h3>Homework1</h3>
+      <p class="w3-opacity">Tech</p>
+      <p>Selector: div</p>
+      <p><a href="../homework1.html" class="w3-button w3-light-grey w3-block">visit</a></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="./images/home2.jpg" alt="no" style="width:100%" height="175.38" class="hoverd">
+      <h3>Homework2</h3>
+      <p class="w3-opacity">Tech</p>
+      <p>Element: table, th, tr, td</p>
+      <p><a href="../homework2.html" class="w3-button w3-light-grey w3-block">visit</a></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="./images/home3.jpg" alt="no" style="width:100%" height="175.38" class="hoverd">
+      <h3>Homework3</h3>
+      <p class="w3-opacity">Tech</p>
+      <p>Property: float, clear</p>
+      <p><a href="../homework3.html" class="w3-button w3-light-grey w3-block">visit</a></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="./images/home4.jpg" alt="no" style="width:100%" height="175.38" class="hoverd">
+      <h3>Homework4</h3>
+      <p class="w3-opacity">Tech</p>
+      <p>All</p>
+      <p><a href="../homework4.html" class="w3-button w3-light-grey w3-block">visit</a></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom w3-center">
+            <div class="w3-display-container">
+                <a href="mailto:kimhantak777@naver.com">
+                    <img src="./images/naver.png" alt="naver" width="100%" height="170" class="hoverd">
+                    <p class="w3-sans-serif"><b>kimhantak777@naver.com</b></p>
+                </a>
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom w3-center">
+            <div class="w3-display-container">
+                <a target="_blank" href="https://github.com/kimhantak/">
+                    <img src="./images/github.png" alt="github" width="100%" height="170" class="hoverd">
+                    <p class="w3-sans-serif"><b>kimhantak</b></p>
+                </a>
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom w3-center">
+            <div class="w3-display-container">
+                <a href="mailto:rlagksxkr777@gmail.com">
+                    <img src="./images/gmail.png" alt="gmail" width="100%" height="170" class="hoverd">
+                    <p class="w3-sans-serif"><b>rlagksxkr777@gmail.com</b></p>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container w3-padding-32">
+    <h3 class="w3-border-bottom w3-border-grey w3-padding-16 w3-left-align" id="location">My Location, Click!(Image Map: dormitory, University)</h3>
+    <p class="w3-serif"><b>체크 표시되어 있는 곳을 클릭. (모바일은 지도를 좌우로 이동)</b></p>
+    <div class="container w3-center">
+        <img class="map" src="./images/map.jpg" usemap="#map">
+        <map name="map">
+            <area target="_blank" alt="Dormitory" title="Dormitory" href="https://map.naver.com/v5/?c=14361003.8033260,4183722.8182536,18,0,0,0,dh&amp;p=1Exv2IQuyuZYcz-23ePYDw,-3.48,38.94,80,Float" coords="116,49,120,131,250,124,233,50,230,38,151,42" shape="poly">
+            <area target="_blank" alt="Dormitory" title="Dormitory" href="https://map.naver.com/v5/?c=14361077.8516971,4183780.7431891,18,0,0,0,dh&amp;p=dcEBwzthCH0vCbUfgPoyFA,68.53,18.94,80,Float" coords="246,36,288,119,388,92,364,22,296,27" shape="poly">
+            <area target="_blank" alt="University" title="University" href="http://www.dongseo.ac.kr/vtour/tour.html" coords="126,150,280,128,396,106,536,57,648,65,655,2,795,6,793,83,759,90,758,295,762,306,1114,304,1108,320,710,502,514,503,510,437,358,438,354,504,334,504,329,614,79,618,85,492,76,488,140,296,185,271,154,204" shape="poly">
+        </map>
+    </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>
+    Powered by Pixabay.<br>
+    Redesigned by <a href="https://github.com/kimhantak/" title="github" target="_blank" class="w3-hover-text-green">Kimhantak</a><br>
+    <span style="font-weight: bold;">Thank You for Visiting me!</span>
+</p>
+</footer>
+
 </body>
 </html>
-
