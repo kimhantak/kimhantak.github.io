@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko-KR">  
+<head>
+  <title>Kimhantak</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="kimhantak">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="kimhantak.github.io">
+
+  <link rel="shortcut icon" sizes="16x16" href="./images/icons/icon.png">
+  <link rel="shortcut icon" sizes="16x16" href="./images/icons/icon.ico">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <div class="slide-menu">
+    <div class="cross" onclick="hideslide()">
+      <img src="./images/menu/cross.png" alt="cross">
+    </div>
+    <div class="inner-slide" onclick="hideslide()">
+      <a href="#hello" class="w3-bar-item w3-button">Hello</a>
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#homework" class="w3-bar-item w3-button">Homework</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+      <div class="flat">
+        <a href="https://www.facebook.com/profile.php?id=100041149173816">
+          <img src="images/icons/facebook.png" height="30" alt="no">
+        </a>
+        <a href="https://www.instagram.com/gimgyeogju/">
+          <img src="images/icons/instagram.png" height="30" alt="no">
+        </a>
+        <a href="https://open.kakao.com/o/shBj8Lgd">
+          <img src="images/icons/kakao-talk.png" height="30" alt="no">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="w3-top" id="navbar">
+    <div class="w3-white w3-wide w3-padding-24 w3-card w3-display-container">
+      <div class="aside-menu w3-display-right w3-margin-right" onclick="showslide()">
+        <img src="images/menu/rect.png" alt="burger">
+      </div>
+      <a href="index.html" class="w3-bar-item w3-display-left">
+        <img class="mark" src="images/logo/mark.png" alt="kimhantak">
+      </a>
+      <div class="w3-display-right w3-hide-medium w3-hide-small navbartextsize">
+        <a href="#hello" class="w3-bar-item">Hello</a>
+        <a href="#projects" class="w3-bar-item">Projects</a>
+        <a href="#homework" class="w3-bar-item">Homework</a>
+        <a href="#contact" class="w3-bar-item">Contact</a>
+        <a href="#gallery" class="w3-bar-item">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="intro">
+    <div class="downanimation" onclick="moveTo()">
+      <img src="./images/icons/down.png" alt="">
+    </div>
+    <video autoplay muted loop poster="images/videos/poster.png">
+      <source src="images/videos/intro.webm" type="video/webm">
+      <source src="images/videos/intro.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="article">
+
+    <div id="hello" class="hovered">
+      <h3 class="title hello">Hello!<div class="gradientbar"></div></h3>
+      <div class="texts">
+        <p>
+          안녕하십니까! 제 이름은 <span>김한탁</span>입니다.<br>
+          동서대학교 2학년에 재학 중입니다.<br>
+          전공은 <span>컴퓨터공학과</span>입니다.
+        </p>
+      </div>
+    </div>
+
+    <div id="projects" class="hovered">
+      <h3 class="title project">Project<div class="gradientbar"></div></h3>
+      <div class="texts">
+        <p>
+          프로젝트를 제작하는 데 사용된 도구들은
+          <span>React.js</span>, <span>Kotlin/Android</span>, <span>Photoshop 2021</span> 입니다.
+        </p>
+      </div>
+      <div class="box">
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="https://khthome.netlify.app/">
+              <img class="shortcut" src="./images/icons/react.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/groupThumb2/practice_theme.png" alt="react">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="https://kht.netlify.app/">
+              <img class="shortcut" src="./images/icons/react.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/groupThumb2/practice_theme1.png" alt="react">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="https://github.com/kimhantak/TODO">
+              <img class="shortcut" src="./images/icons/android.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/groupThumb2/practice_theme2.jpg" alt="Android">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/groupThumb2/practice_theme3.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/groupThumb2/practice_theme3.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/groupThumb2/practice_theme4.jpg">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/groupThumb2/practice_theme4.jpg" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/book.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/book.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/light.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/light.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/moon.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/moon.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/rhino.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/rhino.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/road.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/road.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/shoe.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/shoe.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/storm.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/storm.png" alt="photoshop">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="./images/projects/tiger.png">
+              <img class="shortcut" src="./images/icons/photoshop.png" alt="no">
+            </a>
+          </div>
+          <img class="image" src="./images/projects/tiger.png" alt="photoshop">
+        </div>
+      </div>
+    </div>
+    <div id="homework" class="hovered">
+      <h3 class="title homework">Homework<div class="gradientbar"></div></h3>
+      <div class="homeworkcontent">
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/home1.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              <a href="route/homework1.html">해당 사이트로 이동</a><br>
+              HTML 태그 활용 연습 페이지이다.
+            </p>
+          </div>
+        </div>
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/home2.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              <a href="route/homework2.html">해당 사이트로 이동</a><br>
+              table 태그 활용 연습 페이지이다.
+            </p>
+          </div>
+        </div>
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/home3.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              <a href="route/homework3.html">해당 사이트로 이동</a><br>
+              float 태그 활용 연습 페이지이다.
+            </p>
+          </div>
+        </div>
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/home4.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              <a href="route/homework4.html">해당 사이트로 이동</a><br>
+              float, table 태그 활용 연습 페이지이다.
+            </p>
+          </div>
+        </div>
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/parkade.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              데이터베이스 활용 연습 페이지이다.<br>
+              가상 무인 주차장 환경을 구성하였다.
+            </p>
+          </div>
+        </div>
+        <div class="content" onclick="showSlide(this)">
+          <div class="thumbnail">
+            <img src="./images/groupThumb1/virtualworld.png" alt="no">
+          </div>
+          <div class="detailed" style="height: 0">
+            <p>
+              <span class="summary">요약</span><br>
+              Javascript, 데이터베이스 활용 연습 페이지이다.<br>
+              가상 놀이공원 계산기와 시계로 구성되어 있다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="hovered">
+      <h3 class="title contact">
+        Contact
+        <div class="gradientbar"></div>
+      </h3>
+      <div class="contactbox">
+        <div class="more">
+          <div class="profile">
+            <img src="./images/icons/profile.png" alt="">
+          </div>
+          <div class="profilemore">
+            <table>
+              <tr>
+                <td>Summary</td>
+                <td class="smalltext">Hello! I love coding.</td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td class="smalltext">Ulsan</td>
+              </tr>
+              <tr>
+                <td>Company</td>
+                <td class="smalltext">Dongseo University</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="link">
+          <table class="linkbody">
+            <tr>
+              <td class="right">Github</td>
+              <td class="source">
+                <a href="https://www.github.com/kimhantak">kimhantak</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="right">Naver</td>
+              <td class="source">
+                <a href="mailto:kimhantak777@naver.com">kimhantak777@naver.com</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="right">Gmail</td>
+              <td class="source">
+                <a href="mailto:rlagksxkr777@gmail.com">rlagksxkr777@gmail.com</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="right">Stackoverflow</td>
+              <td class="source">
+                <a href="https://stackoverflow.com/users/15808406/%ea%b9%80%ed%95%9c%ed%83%81">kimhantak</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery" class="hovered">
+      <h3 class="title Gallery">
+        My Gallery
+        <div class="gradientbar"></div>
+      </h3>
+      <div class="box">
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery1.jpg">
+              <img class="shortcut" src="images/icons/fishing.png" alt="">
+            </a> 
+          </div>
+          <img class="image" src="./images/gallery/gallery1.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery3.jpg">
+              <img class="shortcut" src="images/icons/mountainwaterfall.png" alt="">
+            </a>
+          </div>
+          <img class="image" src="./images/gallery/gallery3.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery4.jpg">
+              <img class="shortcut" src="images/icons/hiking.png" alt="">
+            </a>  
+          </div>
+          <img class="image" src="./images/gallery/gallery4.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery5.jpg">
+              <img class="shortcut" src="images/icons/fish.png" alt="">
+            </a>
+          </div>
+          <img class="image" src="./images/gallery/gallery5.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery6.jpg">
+              <img class="shortcut" src="images/icons/tree.png" alt="">
+            </a>
+          </div>
+          <img class="image" src="./images/gallery/gallery6.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery7.jpg">
+              <img class="shortcut" src="images/icons/mountainwaterfall.png" alt="">
+            </a>  
+          </div>
+          <img class="image" src="./images/gallery/gallery7.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery8.jpg">
+              <img class="shortcut" src="images/icons/hiking.png" alt="">
+            </a>  
+          </div>
+          <img class="image" src="./images/gallery/gallery8.jpg" alt="gallery">
+        </div>
+        <div class="imagebox">
+          <div class="addstyle">
+            <a href="images/gallery/gallery9.jpg">
+              <img class="shortcut" src="images/icons/photographer.png" alt="">
+            </a>  
+          </div>
+          <img class="image" src="./images/gallery/gallery9.jpg" alt="gallery">
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="footer w3-padding-24">
+    <div class="flexbox">
+      <a href="index.html">
+        <img class="adjust-height" src="images/logo/markfooter.png" alt="kht">
+      </a>
+    </div>
+    <div class="flexbox">
+      <div class="flex-box">
+        <a href="#hello" class="w3-hover-text-green">Hello</a>
+        <a href="#projects" class="w3-hover-text-green">Projects</a>
+        <a href="#homework" class="w3-hover-text-green">Homework</a>
+        <a href="#contact" class="w3-hover-text-green">Contact</a>
+        <a href="#gallery" class="w3-hover-text-green">Gallery</a>
+      </div>
+      <p>
+        Designed by <a href="https://github.com/kimhantak/" class="w3-hover-text-green">Kimhantak</a><br>
+        <span>Thank You for Visiting me!</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
